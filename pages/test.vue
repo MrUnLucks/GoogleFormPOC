@@ -16,10 +16,16 @@ const areAllInputsCompleted = computed(() => !!name.value && !!surname.value);
 
 <template>
   <div>
-    Nome:<input type="text" v-model="name" /> Cognome<input
-      type="text"
-      v-model="surname"
-    />
+    <div class="flex flex-col gap-2">
+      <p>
+        <span class="text-orange-300">Nome:</span
+        ><input type="text" v-model="name" />
+      </p>
+      <p>
+        <span class="text-orange-300">Cognome:</span
+        ><input type="text" v-model="surname" />
+      </p>
+    </div>
     <div>
       <input
         type="radio"
